@@ -59,10 +59,16 @@ Run the following command:
 ```sh
 git clone https://github.com/Korben00/authy-export.git
 cd authy-export
-pip install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 **Linux:** You need python3-dev libasound2-dev to install musicalbeeps package.
+
+**macOS:** You need to install python-tk available at Homebrew:
+
+```sh
+brew install python-tk
+```
 
 # Usage
 
@@ -82,6 +88,12 @@ To compile the script into an executable file, run the following command:
 
 ```sh
 pyinstaller --collect-all pyfiglet --onefile --noconsole --icon ico.ico authy-export.py
+```
+
+On macOS, you may need to install pillow first available on Homebrew:
+
+```sh
+brew install pillow
 ```
 
 # Author
